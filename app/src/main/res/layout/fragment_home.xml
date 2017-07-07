@@ -1,0 +1,25 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".core.fragment.HomeFragment">
+
+    <Button
+        android:id="@+id/btnGMap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="谷歌地图" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@android:color/darker_gray" />
+
+    <Button
+        android:id="@+id/btnShowOperationLog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="查看日志" />
+
+</LinearLayout>
