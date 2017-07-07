@@ -9,6 +9,7 @@ import com.xmx.japan.R
 import com.xmx.japan.module.log.OperationLogActivity
 import com.xmx.japan.base.fragment.BaseFragment
 import com.xmx.japan.module.map.google.GMapActivity
+import com.xmx.japan.module.shop.ShopActivity
 import kotlinx.android.synthetic.main.fragment_home.*
 
 /**
@@ -28,6 +29,11 @@ class HomeFragment : BaseFragment() {
         // 谷歌地图
         btnGMap.setOnClickListener {
             startActivity(GMapActivity::class.java)
+        }
+
+        // 购物清单
+        btnShop.setOnClickListener {
+            startActivity(ShopActivity::class.java)
         }
 
         // 查看日志

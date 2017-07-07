@@ -17,6 +17,17 @@
         android:background="@android:color/darker_gray" />
 
     <Button
+        android:id="@+id/btnShop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="购物清单" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@android:color/darker_gray" />
+
+    <Button
         android:id="@+id/btnShowOperationLog"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
