@@ -364,7 +364,7 @@ abstract class BaseSQLEntityManager<Entity : ISQLEntity> {
             return null
         }
         // 查询全部数据并转化为实体列表
-        val cursor = database!!.rawQuery("select * from $tableName!!", null)
+        val cursor = database!!.rawQuery("select * from $tableName", null)
         val entities = convertToEntities(cursor)
         cursor.close()
         return entities

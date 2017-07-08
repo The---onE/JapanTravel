@@ -19,6 +19,8 @@ class ShopActivity : BaseTempActivity() {
     // 数据列表适配器
     private var shopAdapter: ShopAdapter? = null
 
+    private var buyFlag = false
+
     override fun initView(savedInstanceState: Bundle?) {
         setContentView(R.layout.activity_shop)
         EventBus.getDefault().register(this)
@@ -111,6 +113,29 @@ class ShopActivity : BaseTempActivity() {
             builder.setNeutralButton("取消") { dialogInterface, i -> dialogInterface.dismiss() }
             builder.show()
             true
+        }
+
+        btnSearch.setOnClickListener {
+            val con = editCondition.text.toString()
+            if (!con.isNullOrBlank()) {
+                shopManager.category = con
+            } else {
+                shopManager.category = null
+            }
+            updateData()
+        }
+
+        tvFlag.setOnClickListener {
+            if (buyFlag) {
+                shopManager.buyFlag = "0"
+                tvFlag.text = "未购"
+                buyFlag = false
+            } else {
+                shopManager.buyFlag = null
+                tvFlag.text = "全部"
+                buyFlag = true
+            }
+            updateData()
         }
     }
 

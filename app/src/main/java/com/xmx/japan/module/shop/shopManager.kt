@@ -42,13 +42,14 @@ object shopManager {
 //        shopList = entityManager.sqlManager.selectAll("Time", false)
         val con = ArrayList<String>()
         if (!category.isNullOrBlank()) {
-            con.add("Category = $category")
+            con.add("Category like '%$category%'")
         }
         if (!buyFlag.isNullOrBlank()) {
-            con.add("BuyFlag = $buyFlag")
+            con.add("BuyFlag like '%$buyFlag%'")
         }
+        val array = Array<String>(con.size, { k -> "" })
         shopList = entityManager.sqlManager.selectByCondition("Time", false,
-                *con.toArray(arrayOfNulls(con.size)))
+                *con.toArray(array))
         // 数据更新
         version++
         //}
