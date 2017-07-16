@@ -56,6 +56,9 @@
         <activity
             android:name="com.xmx.japan.module.shop.ShopActivity"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.xmx.japan.module.sight.SightActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
 
 
         <!-- 实时通信模块、推送（若使用该功能，需添加以下声明）START -->

@@ -22,6 +22,12 @@
         android:layout_height="wrap_content"
         android:text="购物清单" />
 
+    <Button
+        android:id="@+id/btnSight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="景点列表" />
+
     <View
         android:layout_width="match_parent"
         android:layout_height="1px"
