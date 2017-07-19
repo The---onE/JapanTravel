@@ -44,7 +44,7 @@ class SightActivity : BaseTempActivity() {
         fab.setOnClickListener {
             val dialog = SightDialog()
             dialog.initDialog(this)
-            dialog.show(fragmentManager, "SHOP")
+            dialog.show(fragmentManager, "SIGHT")
         }
         listSync.onItemClickListener = AdapterView.OnItemClickListener { adapterView, view, i, l ->
             val sync = sightAdapter?.getItem(i) as Sight
@@ -95,19 +95,6 @@ class SightActivity : BaseTempActivity() {
                 sightManager.category = con
             } else {
                 sightManager.category = null
-            }
-            updateData()
-        }
-
-        tvFlag.setOnClickListener {
-            if (buyFlag) {
-                sightManager.buyFlag = "0"
-                tvFlag.text = "未购"
-                buyFlag = false
-            } else {
-                sightManager.buyFlag = null
-                tvFlag.text = "全部"
-                buyFlag = true
             }
             updateData()
         }
